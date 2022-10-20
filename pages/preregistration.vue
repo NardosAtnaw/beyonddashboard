@@ -4,7 +4,7 @@
   <v-row>
   
     <v-col cols="12" >
-      <h2>View All Preregistration</h2>
+      <h2 class="txt-header">View All Preregistration</h2>
       <v-app id="inspire">
         <v-data-table
           :headers="headers"

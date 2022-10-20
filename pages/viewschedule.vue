@@ -1,7 +1,7 @@
 <template>
 
   <v-row>
-    <h2>View Schedule</h2>
+    <h2 class="txt-header">View Schedule</h2>
     <v-col cols="12">
       <v-app id="inspire">
         <v-data-table

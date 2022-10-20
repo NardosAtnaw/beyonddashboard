@@ -1,7 +1,10 @@
 <template>
   <v-form class="multi-col-validation">
+    <div>
+  <Nav />
+</div>
     <v-row>
-      <h2>Add Schedule</h2>
+      <h2 class="txt-header">Add Schedule</h2>
       <v-col cols="12">
         <v-select
           v-model="form.dayWeek"

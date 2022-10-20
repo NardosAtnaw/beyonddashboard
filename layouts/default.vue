@@ -26,7 +26,7 @@ export default {
     },
   },
   created() {
-    this.checkVerfication();
+    // this.checkVerfication();
     // console.log(document.cookie);
     // this.$cookies.set("email");
   },

@@ -11,8 +11,20 @@
                     <div class="card-front">
                       <div class="center-wrap">
                         <div class="section text-center">
-                          <h4 class="mb-4 pb-3">Log In</h4>
+                          <h4 class="mb-4 pb-3">Sign Up</h4>
                           <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-style"
+                              placeholder="User Name"
+                              id="username"
+                              autocomplete="off"
+                              v-model="userName"
+                            />
+
+                            <i class="input-icon uil uil-at"></i>
+                          </div>
+                          <div class="form-group mt-2">
                             <input
                               type="email"
                               class="form-style"
@@ -21,7 +33,7 @@
                               autocomplete="off"
                               v-model="email"
                             />
-                       
+
                             <i class="input-icon uil uil-at"></i>
                           </div>
                           <div class="form-group mt-2">
@@ -33,11 +45,24 @@
                               autocomplete="off"
                               v-model="password"
                             />
-                           
+
+                            <i class="input-icon uil uil-lock-alt"></i>
+                          </div>
+
+                          <div class="form-group mt-2">
+                            <input
+                              type="confirmpassword"
+                              class="form-style"
+                              placeholder="Confirm password"
+                              id="logpass"
+                              autocomplete="off"
+                              v-model="confirmPassword"
+                            />
+
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
                           <button @click="loginSubmit">
-                            <a href="#" class="btn mt-4">Login</a>
+                            <a href="#" class="btn mt-4">Sign Up</a>
                           </button>
 
                           <!-- <p class="mb-0 mt-4 text-center">
@@ -63,37 +88,32 @@ import Nav from "../components/Nav.vue";
 import jwt from "jsonwebtoken";
 import Cookie from "js-cookie";
 
-
 export default {
   name: "",
   data() {
     return {
+      userName: "",
       email: "",
       password: "",
+      confirmPassword: "",
     };
   },
   methods: {
     async loginSubmit() {
       await axios
-        .post("https://www.beyonddancers.com/admin/login", {
+        .post("https://www.beyonddancers.com/admin/signup", {
+          userName: this.userName,
           email: this.email,
           password: this.password,
+          confirmPassword: this.confirmPassword,
         })
         .then((res) => {
-          console.log(res.data.jwt);
-          if (res.data.message) {
-            jwt.verify(res.data.jwt, "NARDOS_BEYOND", function (err, decoded) {
-              console.log(decoded); // bar
-Cookie.set("email",decoded.email)
-Cookie.set("user_name",decoded.userName)
-
-              // document.cookie = "email = " + decoded.email;
-              // document.cookie = "user_name = " + decoded.userName;
-            });
-            window.location.href = "/dashboard";
+          console.log(res.data);
+          if (res.data.message == "signedup") {
+            this.$router.push("/");
           } else {
-            this.email = "";
             this.password = "";
+            this.confirmPassword = "";
           }
         })
         .catch((err) => console.log(err.message));

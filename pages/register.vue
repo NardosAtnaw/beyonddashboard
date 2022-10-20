@@ -2,7 +2,7 @@
   <div>
 <Nav />
 <v-row>
-  <h2>Register Student</h2>
+  <h2 class="txt-header">Register Student</h2>
   <v-col cols="12">
     <v-app id="inspire">
       <form>
