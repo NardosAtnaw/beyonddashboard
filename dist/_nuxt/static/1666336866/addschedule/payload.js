@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/addschedule", {data:[{}],fetch:{},mutations:void 0});
