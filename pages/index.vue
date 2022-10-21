@@ -21,7 +21,7 @@
                               autocomplete="off"
                               v-model="email"
                             />
-                       
+
                             <i class="input-icon uil uil-at"></i>
                           </div>
                           <div class="form-group mt-2">
@@ -33,7 +33,7 @@
                               autocomplete="off"
                               v-model="password"
                             />
-                           
+
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
                           <button @click="loginSubmit">
@@ -63,7 +63,6 @@ import Nav from "../components/Nav.vue";
 import jwt from "jsonwebtoken";
 import Cookie from "js-cookie";
 
-
 export default {
   name: "",
   data() {
@@ -74,8 +73,9 @@ export default {
   },
   methods: {
     async loginSubmit() {
+      console.log("login");
       await axios
-        .post("https://www.beyonddancers.com/admin/login", {
+        .post("https://beyonddancers.com/admin/login", {
           email: this.email,
           password: this.password,
         })
@@ -84,13 +84,10 @@ export default {
           if (res.data.message) {
             jwt.verify(res.data.jwt, "NARDOS_BEYOND", function (err, decoded) {
               console.log(decoded); // bar
-Cookie.set("email",decoded.email)
-Cookie.set("user_name",decoded.userName)
-
-              // document.cookie = "email = " + decoded.email;
-              // document.cookie = "user_name = " + decoded.userName;
+              Cookie.set("email", decoded.email);
+              Cookie.set("user_name", decoded.userName);
             });
-            window.location.href = "/dashboard";
+            this.$router.push("/dashboard");
           } else {
             this.email = "";
             this.password = "";
