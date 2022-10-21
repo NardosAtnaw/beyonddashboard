@@ -67,8 +67,8 @@ export default {
   data() {
     return {
       clipped: false,
-      drawer: false,
-      fixed: false,
+      drawer: true,
+      fixed: true,
       items: [
         {
           icon: "mdi-apps",

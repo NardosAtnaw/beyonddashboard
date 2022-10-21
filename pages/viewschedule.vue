@@ -1,27 +1,30 @@
 <template>
+  <div>
+    <Nav />
 
-  <v-row>
-    <h2 class="txt-header">View Schedule</h2>
-    <v-col cols="12">
-      <v-app id="inspire">
-        <v-data-table
-          :headers="headers"
-          :items="schedule"
-          :items-per-page="10"
-          class="elevation-1"
-        ></v-data-table>
-      </v-app>
-    </v-col>
-  </v-row>
+    <v-row>
+      <h2 class="txt-header">View Schedule</h2>
+      <v-col cols="12">
+        <v-app id="inspire">
+          <v-data-table
+            :headers="headers"
+            :items="schedule"
+            :items-per-page="10"
+            class="elevation-1"
+          ></v-data-table>
+        </v-app>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 <script>
 import axios from "axios";
+import Nav from "../components/Nav.vue";
 export default {
   name: "View Schedule",
   data() {
     return {
       schedule: [],
-
       headers: [
         { text: "Day", value: "day" },
         { text: "Start Time", value: "timeStart" },
@@ -38,17 +41,19 @@ export default {
   methods: {
     async getSchedule() {
       // console.log(this.form);
-
-      await axios.get("https://www.beyonddancers.com/admin/schedule").then((res) => {
-        // this.schedule = res.data;
-        this.schedule = res.data ;
-        console.log( typeof res.data);
-      });
+      await axios
+        .get("https://www.beyonddancers.com/admin/schedule")
+        .then((res) => {
+          // this.schedule = res.data;
+          this.schedule = res.data;
+          console.log(typeof res.data);
+        });
     },
   },
   created() {
     this.getSchedule();
     // this.sortArray()
   },
+  components: { Nav },
 };
 </script>
