@@ -111,6 +111,7 @@ Required for Children Ages 18 and Under"
           @blur="$v.email.$touch()"
         ></v-text-field>
         <v-text-field
+        
           v-model="form.phone"
           :error-messages="emailErrors"
           label="Phone Number"

@@ -1,7 +1,34 @@
 <template>
   <div>
     <Nav />
-
+    <!-- 
+    <v-row>
+      <h2 class="txt-header">View Schedule</h2>
+      <v-col cols="12">
+        <v-app id="inspire">
+        
+          <v-data-table
+            v-model="selected"
+            :headers="headers"
+            :items="schedule"
+            :items-per-page="20"
+            :single-select="singleSelect"
+            item-key="name"
+            show-select
+            class="elevation-1"
+          >
+            <template v-slot:top>
+              <v-switch
+                v-model="singleSelect"
+                label="Single select"
+                class="pa-3"
+              ></v-switch>
+            </template>
+          </v-data-table>
+          <v-btn @click="deleteRow(selected)">Delete Selected</v-btn>
+        </v-app>
+      </v-col>
+    </v-row> -->
     <v-row>
       <h2 class="txt-header">View Schedule</h2>
       <v-col cols="12">
@@ -9,7 +36,7 @@
           <v-data-table
             :headers="headers"
             :items="schedule"
-            :items-per-page="10"
+            :items-per-page="20"
             class="elevation-1"
           ></v-data-table>
         </v-app>
@@ -24,6 +51,8 @@ export default {
   name: "View Schedule",
   data() {
     return {
+      singleSelect: false,
+      selected: [],
       schedule: [],
       headers: [
         { text: "Day", value: "day" },

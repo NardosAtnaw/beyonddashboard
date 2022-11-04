@@ -2,18 +2,28 @@
 <div>
   <Nav />
   <v-row>
-  
     <v-col cols="12" >
       <h2 class="txt-header">View All Preregistration</h2>
       <v-app id="inspire">
         <v-data-table
           :headers="headers"
           :items="data"
-          :items-per-page="10"
+          :items-per-page="20"
           class="elevation-1"
         ></v-data-table>
       </v-app>
     </v-col>
+    <!-- <v-col cols="12" >
+      <h2 class="txt-header">View All Preregistration</h2>
+      <v-app id="inspire">
+        <v-data-table
+          :headers="headers"
+          :items="data"
+          :items-per-page="20"
+          class="elevation-1"
+        ></v-data-table>
+      </v-app>
+    </v-col> -->
   </v-row>
 </div>
 </template>
