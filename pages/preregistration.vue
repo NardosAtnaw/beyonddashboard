@@ -12,9 +12,7 @@
             class="elevation-1"
           ></v-data-table>
         </v-app>
-        <button @click="ExportExcel('xlsx')" class="btn btn-thrid">
-          Export List of Email
-        </button>
+       
         <button class="btn btn-thrid" id="btn">Export to Excel</button>
       </v-col>
       <!-- <v-col cols="12" >
