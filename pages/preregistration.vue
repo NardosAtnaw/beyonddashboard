@@ -15,19 +15,9 @@
         <button @click="ExportExcel('xlsx')" class="btn btn-thrid">
           Export List of Email
         </button>
-        <!-- <button class="btn btn-thrid" id="btn">Export to Excel</button> -->
+       
       </v-col>
-      <!-- <v-col cols="12" >
-      <h2 class="txt-header">View All Preregistration</h2>
-      <v-app id="inspire">
-        <v-data-table
-          :headers="headers"
-          :items="data"
-          :items-per-page="20"
-          class="elevation-1"
-        ></v-data-table>
-      </v-app>
-    </v-col> -->
+     
     </v-row>
   </div>
 </template>
