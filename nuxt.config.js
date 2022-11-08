@@ -2,9 +2,9 @@ import colors from "vuetify/es5/util/colors";
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head,
-  target: 'static',
+  target: "static",
   router: {
-    base: '/dashboard'
+    base: "/dashboard",
   },
   head: {
     titleTemplate: "%s - beyonddancersdashboard",
@@ -22,9 +22,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/scss/style.scss',
-  ],
+  css: ["~/assets/scss/style.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -44,7 +42,7 @@ export default {
     "@nuxtjs/axios",
   ],
   styleResources: {
-    scss: ['./assets/scss/*.scss']
+    scss: ["./assets/scss/*.scss"],
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

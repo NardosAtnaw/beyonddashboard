@@ -259,6 +259,26 @@ h6 span {
   color: #ffffff !important;
   // box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
 }
+.btn-thrid {
+  
+  width: 15rem;
+  margin-top: 2vw;
+  background: #662483;
+  // border: 1px #707070 solid;
+  color: #fef7f1;
+  &:hover{
+    background: #fef7f1 !important;
+    border: 1px #662483 solid !important;
+  color: #662483 !important;
+  }
+
+  a {
+    color: #fef7f1;
+    font-size: 0.8rem;
+  
+  }
+}
+
 .btn:active,
 .btn:focus {
   background-color: #fff;
@@ -290,6 +310,7 @@ h6 span {
 .txt-header {
   margin-top: 2rem;
   margin-left: 1rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
   color: #1d3858 !important;
 }
