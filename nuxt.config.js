@@ -4,7 +4,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head,
   target: "static",
   router: {
-    base: "/dashboard",
+    base: "/",
   },
   head: {
     titleTemplate: "%s - beyonddancersdashboard",
@@ -18,7 +18,22 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/fav.svg" }],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/fav.svg" },
+      {
+        href: "https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css",
+        type: "text/css",
+        rel: "stylesheet",
+      },
+    ],
+    script: [
+      {
+        src: "https://code.jquery.com/jquery-3.3.1.min.js",
+      },
+      {
+        src: "https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js",
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
