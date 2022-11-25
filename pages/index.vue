@@ -1,8 +1,34 @@
 <template>
   <v-row>
     <v-col>
+     
       <div class="section">
         <div class="container">
+          <div class="logo1">
+        <nuxt-link to="/">
+          
+          <div class="bg-container">
+            <div class="bg-block active">
+              <img src="../assets/images/logo1.svg" alt="" />
+            </div>
+            <div class="bg-block">
+              <img class="mid2" src="../assets/images/logo2.svg" alt="" />
+            </div>
+            <div class="bg-block">
+              <img src="../assets/images/logo3.svg" />
+            </div>
+            <div class="bg-block">
+              <img src="../assets/images/logo4.svg" />
+            </div>
+            <div class="bg-block">
+              <img src="../assets/images/logo5.svg" />
+            </div>
+            <div class="bg-block">
+              <img src="../assets/images/logo6.svg" />
+            </div>
+          </div>
+        </nuxt-link>
+      </div>
           <div class="row full-height justify-content-center">
             <div class="col-12 text-center align-self-center">
               <div class="section text-center">
