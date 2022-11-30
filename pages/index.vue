@@ -63,7 +63,7 @@
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
                           <button @click="loginSubmit">
-                            <a href="#" class="btn mt-4">Login</a>
+                            <a href="" class="btn mt-4">Login</a>
                           </button>
 
                           <!-- <p class="mb-0 mt-4 text-center">

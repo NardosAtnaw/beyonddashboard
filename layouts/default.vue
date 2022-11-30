@@ -7,10 +7,9 @@
     </v-main>
     <v-footer  class="lefty" :absolute="!fixed" app>
       <p>
-
       </p>
       <span
-        >All right reserved to beyond Dance Studio &copy;
+      class="small-text"  >All right reserved to beyond Dance Studio &copy;
         {{ new Date().getFullYear() }} Powered beyond
         <a href="https://versavvymedia.com/">VERSAVVY MEDIA PLC</a>
       </span>

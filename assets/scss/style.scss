@@ -43,7 +43,7 @@ h6 span {
   display: block;
 }
 .full-height {
-  min-height: 86vh;
+  min-height: vh;
 }
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked) {
@@ -314,7 +314,9 @@ element.style {
 .dataTables_wrapper .dataTables_filter input {
   border: 1px solid #fff !important;
 }
-
+.small-text{
+  font-size: .8rem;
+}
 .logo {
   position: absolute;
   top: 30px;
